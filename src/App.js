@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Header from './components/Header'
+import Home from './components/Home'
+import About from './components/About'
+
 import './App.css';
+
 
 class App extends React.Component {
   componentDidMount(){
@@ -12,9 +17,17 @@ class App extends React.Component {
     const name = 'Lain';
 
     return (
-      <div className="App">
-        <Header name={name} foo="bar" />        
-      </div>
+      <BrowserRouter>
+        <div className="App">
+        <Header name={name} foo="bar" /> 
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About}/>
+       
+                
+        </div>
+      </BrowserRouter>
+
+      
     );
   }
 }
