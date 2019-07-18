@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { fsyncSync } from 'fs';
 import { domainToASCII } from 'url';
-import <Link> from react-route-dom
+import {Link} from 'react-router-dom';
 
 class Cities extends Component{
     state = {
